@@ -1,7 +1,7 @@
 import "./styling.css";
 
 const Table = ({ sat }) => {
-  // console.log(sat)
+  console.log(sat)
   return (
     <table>
       <thead>
@@ -19,7 +19,7 @@ const Table = ({ sat }) => {
               <td>{data.name}</td>
               <td>{data.type}</td>
               <td>{data.launchDate}</td>
-              <td>{data.orbitType}</td>
+              {data.operational ? <td>Active</td> : <td>Inactive</td>}
             </tr>
           )
         })}
